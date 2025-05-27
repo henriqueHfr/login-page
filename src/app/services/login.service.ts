@@ -19,4 +19,8 @@ export class LoginService {
       }
     ));
   }
+  signup(name: string, email: string, password: string) {
+    const body = { name, email, password };
+    return this.httpClient.post<LoginResponse>('/api/signup', body)
+  }
 }
