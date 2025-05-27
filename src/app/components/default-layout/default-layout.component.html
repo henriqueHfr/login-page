@@ -4,13 +4,13 @@
         <h2>{{title}}</h2>
         <ng-content></ng-content>
         <div class="button-wrapper">
-            <button class="buttonPrimary">{{primaryButtonText}}</button>
+            <button class="buttonPrimary" [disabled]="disablePrimaryButton" (click)="submit()">{{primaryButtonText}}</button>
             <div class="divider">
                 <div></div>
                 <span>or</span>
                 <div></div>
             </div>
-            <button class="buttonSecondary">{{secondaryButtonText}}</button>
+            <button class="buttonSecondary" (click)="navigate()">{{secondaryButtonText}}</button>
         </div>
     </section>
     <section class="main-section">
